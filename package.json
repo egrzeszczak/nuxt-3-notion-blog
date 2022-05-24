@@ -12,6 +12,7 @@
     "nuxt": "3.0.0-rc.2"
   },
   "dependencies": {
+    "@notionhq/client": "^1.0.4",
     "@tailwindcss/typography": "^0.5.2",
     "marked": "^4.0.16",
     "slugify": "^1.6.5"

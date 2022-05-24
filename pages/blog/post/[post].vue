@@ -4,25 +4,25 @@
             <ul>
                 <li><NuxtLink to="/">Main page</NuxtLink></li>
                 <li><NuxtLink to="/blog">Blog</NuxtLink></li>
-                <li>{{ post.title }}</li>
+                <li>{{ header.properties.Title.title[0].text.content }}</li>
             </ul>
         </div>
         <BlogPost
-            :title="post.title"
-            :author="post.author"
-            :publishedAt="publishedAtReadable"
-            :readEstimate="post.readEstimate"
-            :contentHTML="post.contentHTML"
+            :title="header.properties.Title.title[0].text.content"
+            :author="header.properties.Author.people[0].name"
+            :authorImage="header.properties.Author.people[0].avatar_url"
+            :publishedAt="header.properties.Date.date.start"
+            :content="content.results"
         />
     </div>
 </template>
 
 <script setup>
-import { posts } from "~/store/global.js";
 const route = useRoute();
-const post = posts.value.filter((post) => post.slug == route.params.post)[0];
-const publishedAtReadable = computed(() => {
-    let date = new Date(post.publishedAt);
-    return date.toLocaleString();
-});
+const { data: header } = await useFetch(
+    `/api/post/header/${route.params.post}`
+);
+const { data: content } = await useFetch(
+    `/api/post/content/${route.params.post}`
+);
 </script>

@@ -3,15 +3,15 @@
         <div class="col-span-5 flex items-center gap-2 text-sm">
             <div class="avatar">
                 <div class="w-6 rounded">
-                    <img src="https://api.lorem.space/image/face?hash=92048" />
+                    <img :src="authorImage" />
                 </div>
             </div>
             <div class="">{{ author }}</div>
             <div class="">{{ publishedAtReadable }}</div>
         </div>
         <div class="col-span-4">
-            <div class="font-semibold">
-                <NuxtLink class="link" :to="`/blog/post/${slug}`">{{
+            <div class="font-semibold text-xl">
+                <NuxtLink class="link link-hover" :to="`/blog/post/${id}`">{{
                     title
                 }}</NuxtLink>
             </div>
@@ -24,12 +24,9 @@
                 alt="zdjęcie posta"
             />
         </div>
-        <div class="col-span-5 flex gap-2 items-center">
+        <div class="col-span-5 flex gap-2 items-center flex-wrap">
             <div class="badge" v-for="category in categories">
-                {{ category }}
-            </div>
-            <div class="text-xs">
-                {{ readEstimate }} minute read
+                {{ category.name }}
             </div>
         </div>
     </div>
@@ -37,7 +34,9 @@
 
 <script setup>
 const props = defineProps([
+    "id",
     "author",
+    "authorImage",
     "publishedAt",
     "slug",
     "title",

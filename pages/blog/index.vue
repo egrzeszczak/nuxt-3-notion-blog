@@ -1,41 +1,73 @@
 <template>
     <div>
-        <h1 class="text-2xl">Blog</h1>
-        <div class="flex gap-2">
-            <div class="divide-y flex-1">
-                <BlogPostSmall 
-                    v-for="post in posts" 
-                    :author="post.author"
-                    :publishedAt="post.publishedAt"
-                    :title="post.title"
-                    :slug="post.slug"
-                    :excerpt="post.excerpt" 
-                    :image="post.image"
-                    :categories="post.category"
-                    :readEstimate="post.readEstimate"
-                />
-                <div class="flex justify-center items-center py-8"><NuxtLink to="/blog/new" class="btn btn-wide">New post</NuxtLink></div>
-            </div>
-            <aside class="max-w-sm w-full">
+        <div class="block lg:flex lg:flex-row-reverse lg:gap-2">
+            <aside class="lg:max-w-sm w-full">
                 <h2 class="text-md font-normal my-2">Tags</h2>
                 <div class="flex flex-row flex-wrap gap-1">
                     <span
+                        v-if="!pending"
                         v-for="category in categories"
                         class="btn btn-xs btn-outline"
                         >{{ category }}</span
                     >
+                    <span
+                        data-placeholder
+                        v-else
+                        v-for="el in [1,2,3]"
+                        class="btn btn-xs btn-outline w-32 overflow-hidden relative"
+                    ></span>
                 </div>
             </aside>
+            <div class="divide-y flex-1">
+                <BlogPostSmall
+                    v-if="!pending"
+                    v-for="post in postsFromNotion.results"
+                    :id="post.id"
+                    :author="post.properties.Author.people[0].name"
+                    :authorImage="post.properties.Author.people[0].avatar_url"
+                    :publishedAt="post.properties.Date.date.start"
+                    :title="post.properties.Title.title[0].text.content"
+                    :excerpt="
+                        post.properties.Description.rich_text[0].text.content
+                    "
+                    :image="post.cover.external.url"
+                    :categories="post.properties.Category.multi_select"
+                />
+                <BlogPostSmallPlaceholder v-else v-for="el in [1, 2, 3]" />
+            </div>
         </div>
     </div>
 </template>
 
 <script setup>
-// const posts = ref([])
-import { posts } from "~/store/global.js"
+const { pending, data: postsFromNotion } = useLazyAsyncData(
+    "postsFromNotion",
+    () => $fetch("/api/post/all")
+);
+watch(postsFromNotion, (postsFromNotionW) => {
+    // Because count starts out null, you won't have access
+    // to its contents immediately, but you can watch it.
+});
 
 const categories = computed(() => {
-    const arrays = posts.value.map((post) => post.category);
-    return [...new Set(arrays.flat())];
+    if (pending.value) {
+        return [];
+    } else {
+        // To jest najgorsza rzecz jaką napisałem
+        const notUniqueCategoryArraysProxied =
+            postsFromNotion.value.results.map(
+                (post) => post.properties.Category.multi_select
+            );
+        // Utwórz nowy set kategorii
+        let uniqueCategories = new Set();
+        // Przez to że to są wartości Proxy trzeba je zdekonstruktować
+        notUniqueCategoryArraysProxied.forEach((proxyArray) => {
+            proxyArray.forEach((proxyElement) => {
+                uniqueCategories.add(proxyElement.name);
+            });
+        });
+        // Yea....
+        return uniqueCategories;
+    }
 });
 </script>
