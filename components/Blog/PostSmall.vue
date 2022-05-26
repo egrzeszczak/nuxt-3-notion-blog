@@ -36,7 +36,7 @@
                 {{ description.plain_text }}
             </div>
         </div>
-        <div class="col-span-1 flex items-center justify-center">
+        <div class="col-span-1 flex items-center lg:justify-center justify-end">
             <img
                 v-if="post.cover"
                 class="w-24 h-24 object-cover rounded-box"
