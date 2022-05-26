@@ -22,16 +22,7 @@
                 <BlogPostSmall
                     v-if="!pending"
                     v-for="post in postsFromNotion.results"
-                    :id="post.id"
-                    :author="post.properties.Author.people[0].name"
-                    :authorImage="post.properties.Author.people[0].avatar_url"
-                    :publishedAt="post.properties.Date.date.start"
-                    :title="post.properties.Title.title[0].text.content"
-                    :excerpt="
-                        post.properties.Description.rich_text[0].text.content
-                    "
-                    :image="post.cover.external.url"
-                    :categories="post.properties.Category.multi_select"
+                    :post="post"
                 />
                 <BlogPostSmallPlaceholder v-else v-for="el in [1, 2, 3]" />
             </div>

@@ -1,31 +1,60 @@
 <template>
     <div class="grid grid-cols-5 gap-2 py-8">
         <div class="col-span-5 flex items-center gap-2 text-sm">
-            <div class="avatar">
-                <div class="w-6 rounded">
-                    <img :src="authorImage" />
+            <div
+                class="flex items-center gap-2"
+                v-for="author in post.properties.Author.people"
+            >
+                <div class="avatar">
+                    <div class="w-6 rounded">
+                        <img :src="author.avatar_url" />
+                    </div>
                 </div>
+                {{ author.name }}
             </div>
-            <div class="">{{ author }}</div>
-            <div class="">{{ publishedAtReadable }}</div>
+            <div v-if="post.properties.Date[post.properties.Date.type]">
+                {{ publishedAtReadable }}
+            </div>
         </div>
         <div class="col-span-4">
-            <div class="font-semibold text-xl">
-                <NuxtLink class="link link-hover" :to="`/blog/post/${id}`">{{
-                    title
-                }}</NuxtLink>
+            <div
+                class="font-semibold text-xl"
+                v-for="title in post.properties.Title[
+                    post.properties.Title.type
+                ]"
+            >
+                <NuxtLink class="link link-hover" :to="`/blog/post/${post.id}`">
+                    {{ title.plain_text }}
+                </NuxtLink>
             </div>
-            <div class="font-light">{{ excerpt }}</div>
+            <div
+                class="font-light"
+                v-for="description in post.properties.Description[
+                    post.properties.Description.type
+                ]"
+            >
+                {{ description.plain_text }}
+            </div>
         </div>
         <div class="col-span-1 flex items-center justify-center">
             <img
-                class="w-24 h-24 object-cover"
-                :src="image"
+                v-if="post.cover"
+                class="w-24 h-24 object-cover rounded-box"
+                :src="post.cover[post.cover.type].url"
                 alt="zdjęcie posta"
             />
+            <div
+                v-else
+                class="w-24 h-24 overflow-hidden relative bg-gray-200 rounded-box"
+            ></div>
         </div>
         <div class="col-span-5 flex gap-2 items-center flex-wrap">
-            <div class="badge" v-for="category in categories">
+            <div
+                class="badge"
+                v-for="category in post.properties.Category[
+                    post.properties.Category.type
+                ]"
+            >
                 {{ category.name }}
             </div>
         </div>
@@ -33,20 +62,14 @@
 </template>
 
 <script setup>
-const props = defineProps([
-    "id",
-    "author",
-    "authorImage",
-    "publishedAt",
-    "slug",
-    "title",
-    "excerpt",
-    "image",
-    "categories",
-    "readEstimate",
-]);
+const props = defineProps(["post"]);
 const publishedAtReadable = computed(() => {
-    let date = new Date(props.publishedAt)
-    return date.toLocaleString()
-})
+    // Obliczanie daty do przyjaznego formatu
+    if (props.post.properties.Date[props.post.properties.Date.type]) {
+        let date = new Date(
+            props.post.properties.Date[props.post.properties.Date.type].start
+        );
+        return date.toLocaleString();
+    } else return "?";
+});
 </script>
