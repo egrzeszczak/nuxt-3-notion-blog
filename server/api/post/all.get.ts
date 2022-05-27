@@ -18,7 +18,7 @@ export default defineEventHandler((event) => {
         sorts: [
             {
                 property: "Date",
-                direction: "ascending",
+                direction: "descending",
             },
         ],
     });
