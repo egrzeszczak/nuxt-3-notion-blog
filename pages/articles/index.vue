@@ -1,11 +1,8 @@
 <template>
-    <div>
+    <div class="max-w-full mx-0">
         <div class="block lg:flex lg:flex-row-reverse lg:gap-2">
             <aside class="lg:max-w-sm w-full">
-                <BlogCategoryBox 
-                    :categories="categories"
-                    :pending="pending"
-                />
+                <BlogCategoryBox :categories="categories" :pending="pending" />
             </aside>
             <div class="divide-y flex-1">
                 <BlogPostSmall
@@ -20,6 +17,7 @@
 </template>
 
 <script setup>
+
 const { pending, data: postsFromNotion } = useLazyAsyncData(
     "postsFromNotion",
     () => $fetch("/api/post/all")

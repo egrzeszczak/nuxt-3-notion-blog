@@ -23,7 +23,7 @@
                     post.properties.Title.type
                 ]"
             >
-                <NuxtLink class="link link-hover" :to="`/blog/post/${post.id}`">
+                <NuxtLink class="link link-hover" :to="`/articles/post/${post.id}`">
                     {{ title.plain_text }}
                 </NuxtLink>
             </div>
@@ -45,7 +45,7 @@
             />
             <div
                 v-else
-                class="w-24 h-24 overflow-hidden relative bg-gray-200 rounded-box"
+                class="w-24 h-24 overflow-hidden relative bg-base-200 border-base-300 rounded-box"
             ></div>
         </div>
         <div class="col-span-5 flex gap-2 items-center flex-wrap">

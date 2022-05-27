@@ -3,16 +3,13 @@
         <div class="text-sm breadcrumbs">
             <ul>
                 <li><NuxtLink to="/">Main page</NuxtLink></li>
-                <li><NuxtLink to="/blog">Blog</NuxtLink></li>
+                <li><NuxtLink to="/articles">Blog</NuxtLink></li>
                 <li>{{ header.properties.Title.title[0].text.content }}</li>
             </ul>
         </div>
         <BlogPost
-            :title="header.properties.Title.title[0].text.content"
-            :author="header.properties.Author.people[0].name"
-            :authorImage="header.properties.Author.people[0].avatar_url"
-            :publishedAt="header.properties.Date.date.start"
-            :content="content.results"
+            :header="header"
+            :content="content"
         />
     </div>
 </template>

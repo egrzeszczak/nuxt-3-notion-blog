@@ -21,3 +21,9 @@
         </div>
     </div>
 </template>
+
+<script>
+definePageMeta({
+    layout: "nomargins",
+});
+</script>

@@ -97,8 +97,8 @@
 <script setup>
 const links = ref([
     {
-        name: "Blog",
-        link: "/blog",
+        name: "Articles",
+        link: "/articles",
     },
     {
         name: "About",
