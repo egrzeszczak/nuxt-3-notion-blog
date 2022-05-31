@@ -1,5 +1,7 @@
 # nuxt3-blog
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ddbeeb2c-df54-4838-a059-66a3210facba/deploy-status)](https://app.netlify.com/sites/earnest-longma-3caf94/deploys)
+
 ### Description
 This is a **work in progress** project based on Nuxt 3, Tailwind CSS and Notion API
 
