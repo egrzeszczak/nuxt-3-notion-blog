@@ -18,7 +18,7 @@
         </div>
         <div class="col-span-4">
             <div
-                class="font-semibold text-xl"
+                class="font-semibold text-2xl my-1"
                 v-for="title in post.properties.Title[
                     post.properties.Title.type
                 ]"
@@ -27,14 +27,14 @@
                     {{ title.plain_text }}
                 </NuxtLink>
             </div>
-            <div
+            <span
                 class="font-light"
                 v-for="description in post.properties.Description[
                     post.properties.Description.type
                 ]"
             >
                 {{ description.plain_text }}
-            </div>
+            </span>
         </div>
         <div class="col-span-1 flex items-center lg:justify-center justify-end">
             <img
