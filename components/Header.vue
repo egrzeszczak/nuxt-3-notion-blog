@@ -56,7 +56,9 @@
                     </li>
                 </ul>
             </div>
-            <NuxtLink to="/" class="btn btn-ghost normal-case text-xl">daisyUI</NuxtLink>
+            <NuxtLink to="/" class="btn btn-ghost normal-case text-xl"
+                >daisyUI</NuxtLink
+            >
         </div>
         <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal p-0">
@@ -104,25 +106,9 @@ const links = ref([
         name: "About",
         link: "/about",
     },
+    {
+        name: "Colors",
+        link: "/colors",
+    },
 ]);
-/*
-    {
-        name: "Parent",
-        link: "/parent",
-        children: [
-            {
-                name: "Child 1",
-                link: "/child1",
-            },
-            {
-                name: "Child 2",
-                link: "/child1",
-            },
-        ],
-    },
-    {
-        name: "Item 3",
-        link: "/item3",
-    },
-*/
 </script>

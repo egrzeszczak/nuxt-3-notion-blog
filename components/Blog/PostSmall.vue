@@ -50,7 +50,7 @@
         </div>
         <div class="col-span-5 flex gap-2 items-center flex-wrap">
             <div
-                class="badge"
+                class="badge badge-neutral"
                 v-for="category in post.properties.Category[
                     post.properties.Category.type
                 ]"

@@ -24,6 +24,42 @@ NOTION_POST_DATABASE=your_notion_posts_database
 |-|-|-|-|-|-|
 |type: `Key`|type: `Text`|type: `Multi-select`|type: `User`|type: `Date`|type: `Checkbox`|
 
-As of now please also select a cover for the post. If you dont it throws and error. I'll fix that later
+### Notion compontents
 
-
+|Block type|Status|
+|:-:|:-:|
+|Heading 1|✅|
+|Heading 2|✅|
+|Heading 3|✅|
+|Toggle heading 1|🔨|
+|Toggle heading 2|🔨|
+|Toggle heading 3|🔨|
+|Paragraph|✅|
+|Rich text|✅|
+|To-do list|✅|
+|Bullet list|✅|
+|Numbered list|🔨|
+|Table|✅|
+|Toggle|✅|
+|Quote|✅|
+|Divider|✅|
+|Page link|✅|
+|Callout|✅|
+|Table of contents|✅|
+|Subpage|🔨|
+|User mention|🔨|
+|Page mention|🔨|
+|Date mention|🔨|
+|Inline Equation|🔨 (inline displays as a block)|
+|Block equation|🔨|
+|Web bookmark|🔨|
+|Image|✅|
+|Emoji|✅|
+|Video|🔨|
+|Audio|🔨|
+|Code|✅ (without syntax highlighting)|
+|File|🔨|
+|Embed|🔨|
+|Synced block|🔨|
+|Child database|🔨|
+|Button|❌ Not implementing|

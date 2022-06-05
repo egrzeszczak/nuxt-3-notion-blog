@@ -42,56 +42,17 @@
         <!-- Autor, Data publikacji, W ile do przeczytania? -->
 
         <!-- Treść -->
-        <!-- <article class="prose" v-html="content"></article> -->
         <article class="prose">
-            <div v-for="block in content.results" :key="block.id">
-                <h1 v-if="block.type == 'heading_1'" :id="block.id">
-                    <NotionRichText :richText="block.heading_1.rich_text" />
-                </h1>
-                <h2 v-else-if="block.type == 'heading_2'" :id="block.id">
-                    <NotionRichText :richText="block.heading_2.rich_text" />
-                </h2>
-                <h3 v-else-if="block.type == 'heading_3'" :id="block.id">
-                    <NotionRichText :richText="block.heading_3.rich_text" />
-                </h3>
-                <p v-else-if="block.type == 'paragraph'">
-                    <NotionRichText :richText="block.paragraph.rich_text" />
-                </p>
-                <li v-else-if="block.type == 'bulleted_list_item'">
-                    <NotionRichText
-                        :richText="block.bulleted_list_item.rich_text"
-                    />
-                </li>
-                <li v-else-if="block.type == 'numbered_list_item'">
-                    <NotionRichText
-                        :richText="block.numbered_list_item.rich_text"
-                    />
-                </li>
-
-                <NotionCode v-else-if="block.type == 'code'" :block="block" />
-
-                <NotionCallout v-else-if="block.type == 'callout'" :block="block"/>
-                
-                <NotionImage v-else-if="block.type == 'image'" :block="block" />
-
-                <blockquote v-else-if="block.type == 'quote'">
-                    <NotionRichText :richText="block.quote.rich_text" />
-                </blockquote>
-
-                <NotionBookmark v-else-if="block.type == 'bookmark'" :block="block"/>
-
-                <NotionTableOfContents v-else-if="block.type == 'table_of_contents'" :content="content.results.filter(block => {
-                    return (block.type == 'heading_1' || block.type == 'heading_2' || block.type == 'heading_3')
-                })" />
-
-                <pre v-else>{{ block }}</pre>
-            </div>
+            <NotionRender :content="content.results" />
         </article>
         <!-- Treść -->
     </section>
 </template>
 
 <script setup>
+useHead({
+    script: [{ hid: "mathjax", src: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_HTML", defer: true }],
+});
 const props = defineProps(["header", "content"]);
 const publishedAtReadable = computed(() => {
     // Obliczanie daty do przyjaznego formatu

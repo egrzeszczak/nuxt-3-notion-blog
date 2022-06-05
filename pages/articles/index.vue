@@ -4,7 +4,7 @@
             <aside class="lg:max-w-sm w-full">
                 <BlogCategoryBox :categories="categories" :pending="pending" />
             </aside>
-            <div class="divide-y flex-1">
+            <div class="divide-y flex-1 divide-base-200">
                 <BlogPostSmall
                     v-if="!pending"
                     v-for="post in postsFromNotion.results"

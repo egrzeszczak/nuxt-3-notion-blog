@@ -4,148 +4,148 @@
             <div class="avatar">
                 <div
                     data-placeholder
-                    class="w-6 h-6 rounded bg-base-200 overflow-hidden relative"
+                    class="w-6 h-6 rounded bg-base-300 overflow-hidden relative"
                 ></div>
             </div>
             <div
                 data-placeholder
-                class="h-3 w-20 bg-base-200 rounded-box overflow-hidden relative"
+                class="h-3 w-20 bg-base-300 rounded-box overflow-hidden relative"
             ></div>
             <div
                 data-placeholder
-                class="h-3 w-32 bg-base-200 rounded-box overflow-hidden relative"
+                class="h-3 w-32 bg-base-300 rounded-box overflow-hidden relative"
             ></div>
             <div
                 data-placeholder
-                class="h-3 w-20 bg-base-200 rounded-box overflow-hidden relative"
+                class="h-3 w-20 bg-base-300 rounded-box overflow-hidden relative"
             ></div>
         </div>
         <div class="col-span-4 gap-2">
             <div class="flex gap-2 mb-2">
                 <div
                     data-placeholder
-                    class="h-4 w-20 bg-base-200 rounded-box overflow-hidden relative"
+                    class="h-4 w-20 bg-base-300 rounded-box overflow-hidden relative"
                 ></div>
                 <div
                     data-placeholder
-                    class="h-4 w-52 bg-base-200 rounded-box overflow-hidden relative"
+                    class="h-4 w-52 bg-base-300 rounded-box overflow-hidden relative"
                 ></div>
                 <div
                     data-placeholder
-                    class="h-4 w-32 bg-base-200 rounded-box overflow-hidden relative"
+                    class="h-4 w-32 bg-base-300 rounded-box overflow-hidden relative"
                 ></div>
                 <div
                     data-placeholder
-                    class="h-4 w-16 bg-base-200 rounded-box overflow-hidden relative"
+                    class="h-4 w-16 bg-base-300 rounded-box overflow-hidden relative"
                 ></div>
             </div>
             <div class="flex gap-2 flex-wrap">
                 <div
                     data-placeholder
-                    class="h-2 w-32 bg-base-200 rounded-box overflow-hidden relative"
+                    class="h-2 w-32 bg-base-300 rounded-box overflow-hidden relative"
                 ></div>
                 <div
                     data-placeholder
-                    class="h-2 w-52 bg-base-200 rounded-box overflow-hidden relative"
+                    class="h-2 w-52 bg-base-300 rounded-box overflow-hidden relative"
                 ></div>
                 <div
                     data-placeholder
-                    class="h-2 w-24 bg-base-200 rounded-box overflow-hidden relative"
+                    class="h-2 w-24 bg-base-300 rounded-box overflow-hidden relative"
                 ></div>
                 <div
-                    class="h-2 w-16 bg-base-200 rounded-box overflow-hidden relative"
-                ></div>
-                <div
-                    data-placeholder
-                    class="h-2 w-8 bg-base-200 rounded-box overflow-hidden relative"
+                    class="h-2 w-16 bg-base-300 rounded-box overflow-hidden relative"
                 ></div>
                 <div
                     data-placeholder
-                    class="h-2 w-24 bg-base-200 rounded-box overflow-hidden relative"
+                    class="h-2 w-8 bg-base-300 rounded-box overflow-hidden relative"
                 ></div>
                 <div
                     data-placeholder
-                    class="h-2 w-16 bg-base-200 rounded-box overflow-hidden relative"
-                ></div>
-                <div
-                    class="h-2 w-8 bg-base-200 rounded-box overflow-hidden relative"
+                    class="h-2 w-24 bg-base-300 rounded-box overflow-hidden relative"
                 ></div>
                 <div
                     data-placeholder
-                    class="h-2 w-26 bg-base-200 rounded-box overflow-hidden relative"
+                    class="h-2 w-16 bg-base-300 rounded-box overflow-hidden relative"
+                ></div>
+                <div
+                    class="h-2 w-8 bg-base-300 rounded-box overflow-hidden relative"
                 ></div>
                 <div
                     data-placeholder
-                    class="h-2 w-52 bg-base-200 rounded-box overflow-hidden relative"
+                    class="h-2 w-26 bg-base-300 rounded-box overflow-hidden relative"
                 ></div>
                 <div
                     data-placeholder
-                    class="h-2 w-24 bg-base-200 rounded-box overflow-hidden relative"
+                    class="h-2 w-52 bg-base-300 rounded-box overflow-hidden relative"
                 ></div>
                 <div
                     data-placeholder
-                    class="h-2 w-32 bg-base-200 rounded-box overflow-hidden relative"
+                    class="h-2 w-24 bg-base-300 rounded-box overflow-hidden relative"
                 ></div>
                 <div
                     data-placeholder
-                    class="h-2 w-16 bg-base-200 rounded-box overflow-hidden relative"
+                    class="h-2 w-32 bg-base-300 rounded-box overflow-hidden relative"
                 ></div>
                 <div
                     data-placeholder
-                    class="h-2 w-8 bg-base-200 rounded-box overflow-hidden relative"
+                    class="h-2 w-16 bg-base-300 rounded-box overflow-hidden relative"
                 ></div>
                 <div
                     data-placeholder
-                    class="h-2 w-52 bg-base-200 rounded-box overflow-hidden relative"
+                    class="h-2 w-8 bg-base-300 rounded-box overflow-hidden relative"
                 ></div>
                 <div
                     data-placeholder
-                    class="h-2 w-8 bg-base-200 rounded-box overflow-hidden relative"
+                    class="h-2 w-52 bg-base-300 rounded-box overflow-hidden relative"
                 ></div>
                 <div
                     data-placeholder
-                    class="h-2 w-24 bg-base-200 rounded-box overflow-hidden relative"
+                    class="h-2 w-8 bg-base-300 rounded-box overflow-hidden relative"
                 ></div>
                 <div
                     data-placeholder
-                    class="h-2 w-16 bg-base-200 rounded-box overflow-hidden relative"
+                    class="h-2 w-24 bg-base-300 rounded-box overflow-hidden relative"
                 ></div>
                 <div
                     data-placeholder
-                    class="h-2 w-52 bg-base-200 rounded-box overflow-hidden relative"
+                    class="h-2 w-16 bg-base-300 rounded-box overflow-hidden relative"
                 ></div>
                 <div
                     data-placeholder
-                    class="h-2 w-32 bg-base-200 rounded-box overflow-hidden relative"
+                    class="h-2 w-52 bg-base-300 rounded-box overflow-hidden relative"
                 ></div>
                 <div
                     data-placeholder
-                    class="h-2 w-24 bg-base-200 rounded-box overflow-hidden relative"
+                    class="h-2 w-32 bg-base-300 rounded-box overflow-hidden relative"
                 ></div>
                 <div
                     data-placeholder
-                    class="h-2 w-8 bg-base-200 rounded-box overflow-hidden relative"
+                    class="h-2 w-24 bg-base-300 rounded-box overflow-hidden relative"
+                ></div>
+                <div
+                    data-placeholder
+                    class="h-2 w-8 bg-base-300 rounded-box overflow-hidden relative"
                 ></div>
             </div>
         </div>
         <div class="col-span-1 flex items-center justify-center">
             <div
                 data-placeholder
-                class="w-24 h-24 overflow-hidden relative bg-base-200 rounded-box"
+                class="w-24 h-24 overflow-hidden relative bg-base-300 rounded-box"
             ></div>
         </div>
         <div class="col-span-5 flex gap-2 items-center flex-wrap">
             <div
                 data-placeholder
-                class="badge w-32 bg-primary overflow-hidden relative"
+                class="badge w-32 bg-neutral overflow-hidden relative"
             ></div>
             <div
                 data-placeholder
-                class="badge w-16 bg-primary overflow-hidden relative"
+                class="badge w-16 bg-neutral overflow-hidden relative"
             ></div>
             <div
                 data-placeholder
-                class="badge w-52 bg-primary overflow-hidden relative"
+                class="badge w-52 bg-neutral overflow-hidden relative"
             ></div>
         </div>
     </div>

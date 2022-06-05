@@ -1,12 +1,12 @@
 <template>
     <div class="bg-base-100 my-4">
         <ul
-            class="menu menu-compact bg-base-100 w-full p-2 rounded-box border my-2"
+            class="menu menu-compact bg-base-100 w-full p-2 rounded-box border border-base-200 my-2"
         >
             <li
                 v-for="(block, index) in content"
                 :key="index"
-                class="font-bold divide-y"
+                class="font-bold my-0"
             >
                 <a
                     class="no-underline"
@@ -17,7 +17,6 @@
                         'pl-20 font-medium': block.type == 'heading_3',
                     }"
                 >
-                    <span class="font-mono">#</span>
                     <span class="" v-for="text in block[block.type].rich_text">
                         {{ text.plain_text }}
                     </span>
