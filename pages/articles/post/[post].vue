@@ -14,7 +14,7 @@
             :header="header"
             :content="content"
         />
-        <BlogPostSmallPlaceholder v-else v-for="el in [1, 2, 3]" />
+        <BlogPostPlaceholder v-else/>
     </div>
 </template>
 
