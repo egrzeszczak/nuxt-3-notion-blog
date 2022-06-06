@@ -1,12 +1,12 @@
 <template>
     <div>
-        <h2 class="text-md font-normal my-2">Tags</h2>
+        <h2 class="text-md font-normal my-2">Categories</h2>
         <div class="flex flex-row flex-wrap gap-1">
             <span
                 v-if="!pending"
-                v-for="category in categories"
+                v-for="category in categories.properties.Category.multi_select.options"
                 class="btn btn-xs btn-outline"
-                >{{ category }}</span
+                >{{ category.name }}</span
             >
             <span
                 data-placeholder
@@ -20,5 +20,14 @@
 </template>
 
 <script setup>
-const props = defineProps(["categories", "pending"]);
+const {
+    pending,
+    data: categories,
+} = useLazyAsyncData("categories", () =>
+    $fetch(`/api/notion/retrieve-database`)
+);
+watch(categories, (categoriesW) => {
+    // Because count starts out null, you won't have access
+    // to its contents immediately, but you can watch it.
+});
 </script>

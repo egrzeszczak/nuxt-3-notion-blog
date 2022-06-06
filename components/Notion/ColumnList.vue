@@ -1,6 +1,6 @@
 <script setup>
 const props = defineProps(["block"]);
-const { data: content } = await useFetch(`/api/post/content/${props.block.id}`);
+const { data: content } = await useFetch(`/api/notion/retrieve-block-children/${props.block.id}`);
 </script>
 
 <template>

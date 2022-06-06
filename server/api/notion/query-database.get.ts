@@ -1,6 +1,7 @@
 import { Client } from "@notionhq/client";
 
 export default defineEventHandler((event) => {
+    const query = useQuery(event)
     const notion = new Client({ auth: process.env.NOTION_API_TOKEN });
 
     const response = notion.databases.query({
@@ -21,6 +22,8 @@ export default defineEventHandler((event) => {
                 direction: "descending",
             },
         ],
+        page_size: 3,
+        start_cursor: query.cursor != 'undefined' ? query.cursor.toString() : undefined
     });
 
     return response;

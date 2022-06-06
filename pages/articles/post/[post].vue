@@ -26,7 +26,7 @@ const {
     pending: pendingHeader,
     refresh: refreshHeader,
 } = await useLazyAsyncData("header", () =>
-    $fetch(`/api/post/header/${route.params.post}`)
+    $fetch(`/api/notion/retrieve-page/${route.params.post}`)
 );
 
 const {
@@ -34,7 +34,7 @@ const {
     pending: pendingContent,
     refresh: refreshContent,
 } = await useLazyAsyncData("content", () =>
-    $fetch(`/api/post/content/${route.params.post}`)
+    $fetch(`/api/notion/retrieve-block-children/${route.params.post}`)
 );
 
 watch(header, (headerW) => {
