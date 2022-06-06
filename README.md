@@ -5,7 +5,7 @@
 ### Description
 This is a **work in progress** project based on Nuxt 3, Tailwind CSS and Notion API
 
-You can see the demo [here](earnest-longma-3caf94.netlify.app).
+You can see the demo [here](https://earnest-longma-3caf94.netlify.app).
 
 ### Stack
 
