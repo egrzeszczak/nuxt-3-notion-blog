@@ -1,5 +1,17 @@
 <template>
     <div class="grid grid-cols-5 gap-2 py-8">
+        <div class="flex lg:hidden col-span-5 mb-2">
+            <img
+                v-if="post.cover"
+                class="w-full h-24 object-cover rounded-box"
+                :src="post.cover[post.cover.type].url"
+                alt="zdjęcie posta"
+            />
+            <div
+                v-else
+                class="w-24 h-24 overflow-hidden relative bg-base-200 border-base-300 rounded-box"
+            ></div>
+        </div>
         <div class="col-span-5 flex items-center gap-2 text-sm">
             <div
                 class="flex items-center gap-2"
@@ -16,7 +28,7 @@
                 {{ publishedAtReadable }}
             </div>
         </div>
-        <div class="col-span-4">
+        <div class="lg:col-span-4 col-span-5">
             <div
                 class="font-semibold text-2xl my-1"
                 v-for="title in post.properties.Title[
@@ -36,7 +48,7 @@
                 {{ description.plain_text }}
             </span>
         </div>
-        <div class="col-span-1 flex items-center lg:justify-center justify-end">
+        <div class="hidden lg:flex col-span-1 items-center lg:justify-center justify-end">
             <img
                 v-if="post.cover"
                 class="w-24 h-24 object-cover rounded-box"
