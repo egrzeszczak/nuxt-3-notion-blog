@@ -35,20 +35,27 @@
                     post.properties.Title.type
                 ]"
             >
-                <NuxtLink class="link link-hover" :to="`/articles/post/${post.id}`">
+                <NuxtLink
+                    class="link link-hover"
+                    :to="`/articles/post/${post.id}`"
+                >
                     {{ title.plain_text }}
                 </NuxtLink>
             </div>
-            <span
-                class="font-light"
-                v-for="description in post.properties.Description[
-                    post.properties.Description.type
-                ]"
-            >
-                {{ description.plain_text }}
-            </span>
+            <div class="prose">
+                <span
+                    class="font-light"
+                    v-for="description in post.properties.Description[
+                        post.properties.Description.type
+                    ]"
+                >
+                    {{ description.plain_text }}
+                </span>
+            </div>
         </div>
-        <div class="hidden lg:flex col-span-1 items-center lg:justify-center justify-end">
+        <div
+            class="hidden lg:flex col-span-1 items-center lg:justify-center justify-end"
+        >
             <img
                 v-if="post.cover"
                 class="w-24 h-24 object-cover rounded-box"

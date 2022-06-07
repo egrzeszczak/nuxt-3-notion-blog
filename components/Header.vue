@@ -91,7 +91,7 @@
             </ul>
         </div>
         <div class="navbar-end">
-            <NuxtLink class="btn btn-primary" :to="rightLink.link">{{
+            <NuxtLink class="btn btn-neutral" :to="rightLink.link">{{
                 rightLink.name
             }}</NuxtLink>
         </div>
