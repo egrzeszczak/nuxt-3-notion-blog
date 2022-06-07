@@ -50,6 +50,7 @@ NOTION_POST_DATABASE=your_notion_posts_database
 |Block equation|✅||
 |Image|✅||
 |Emoji|✅||
+|Bookmark|✅||
 |User mention|✅|Works, just highlights the user|
 |Code|✅🔨|Works without syntax highlighting - will implement something like `highlight.js` later|
 |Numbered list|🔨||
@@ -57,7 +58,6 @@ NOTION_POST_DATABASE=your_notion_posts_database
 |Page mention|🔨|Works, but for articles - not for subpages|
 |Date mention|🔨|Formatting still to do|
 |Inline Equation|🔨|For now inline displays as a block - will fix it later|
-|Web bookmark|🔨|To do|
 |Video|🔨|To do|
 |Audio|🔨|To do|
 |File|🔨|To do|
