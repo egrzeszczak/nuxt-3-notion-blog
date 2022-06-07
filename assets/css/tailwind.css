@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-    @apply scrollbar-thin dark:scrollbar-thumb-transparent scrollbar-thumb-transparent;
+    @apply scrollbar-thin scrollbar-thumb-zinc-700 scrollbar-track-inherit;
 }

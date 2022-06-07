@@ -9,7 +9,7 @@
 
         <input type="checkbox" :id="block.id" class="modal-toggle" />
         <label :for="block.id" class="modal cursor-pointer">
-            <label class="modal-box relative max-w-4xl not-prose" for="">
+            <label class="modal-box relative max-w-4xl not-prose flex flex-col items-center" for="">
                 <img :src="block.image[block.image.type].url" class="mb-0" />
                 <div
                     v-if="block.image.caption"
