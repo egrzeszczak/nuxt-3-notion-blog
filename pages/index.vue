@@ -1,9 +1,10 @@
 <template>
     <div>
+        <Header class="absolute bg-transparent align-top text-neutral-content" />
         <div
-            class="hero h-96"
+            class="hero h-screen items-top"
             style="
-                background-image: url(https://images.unsplash.com/photo-1616243850909-f010afe8de3a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
+                background-image: url(https://images.unsplash.com/photo-1654531802344-ba2b2ca67699?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
             "
         >
             <div class="hero-overlay bg-opacity-60"></div>
@@ -15,7 +16,6 @@
                         assumenda excepturi exercitationem quasi. In deleniti
                         eaque aut repudiandae et a id nisi.
                     </p>
-                    <button class="btn btn-primary">Get Started</button>
                 </div>
             </div>
         </div>
@@ -24,6 +24,6 @@
 
 <script>
 definePageMeta({
-    layout: "nomargins",
+    layout: "landing",
 });
 </script>

@@ -9,7 +9,7 @@
             'bg-green-200 dark:bg-green-900': block.callout.color == 'green_background',
             'bg-yellow-200 dark:bg-yellow-900': block.callout.color == 'yellow_background',
             'bg-orange-200 dark:bg-orange-900': block.callout.color == 'orange_background',
-            'bg-brown-200 dark:bg-brown-900': block.callout.color == 'brown_background',
+            'bg-amber-200 dark:bg-amber-900': block.callout.color == 'brown_background',
             'bg-gray-200 dark:bg-gray-900': block.callout.color == 'gray_background',
         }"
     >

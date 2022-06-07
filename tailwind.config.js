@@ -8,18 +8,22 @@ module.exports = {
     theme: {
         extend: {},
     },
-    plugins: [require("@tailwindcss/typography"), require("daisyui")],
+    plugins: [
+        require("tailwind-scrollbar"),
+        require("@tailwindcss/typography"),
+        require("daisyui"),
+    ],
     daisyui: {
         themes: [
+            "corporate",
             {
-              business: {
+                business: {
                     ...require("daisyui/src/colors/themes")[
                         "[data-theme=business]"
                     ],
                     "base-100": "#10151a",
                 },
             },
-            "corporate",
         ],
         darkTheme: "business",
     },

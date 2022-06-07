@@ -20,9 +20,9 @@
                 </label>
                 <ul
                     tabindex="0"
-                    class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+                    class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 text-base-content rounded-box w-52"
                 >
-                    <li v-for="link in links">
+                    <li v-for="link in middleLinks">
                         <NuxtLink
                             :to="link.link"
                             v-if="link.children"
@@ -62,7 +62,7 @@
         </div>
         <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal p-0">
-                <li v-for="link in links">
+                <li v-for="link in middleLinks">
                     <NuxtLink :to="link.link" v-if="link.children" tabindex="0"
                         >{{ link.name
                         }}<svg
@@ -78,7 +78,7 @@
                     ></NuxtLink>
                     <ul
                         v-if="link.children"
-                        class="menu bg-base-100 p-2 rounded-box border shadow"
+                        class="menu bg-base-100 text-base-content p-2 rounded-box border shadow"
                     >
                         <li v-for="child in link.children">
                             <NuxtLink :to="child.link">{{
@@ -91,24 +91,26 @@
             </ul>
         </div>
         <div class="navbar-end">
-            <a class="btn">Contact</a>
+            <NuxtLink class="btn btn-primary" :to="rightLink.link">{{
+                rightLink.name
+            }}</NuxtLink>
         </div>
     </div>
 </template>
 
 <script setup>
-const links = ref([
+const middleLinks = ref([
+    {
+        name: "Home",
+        link: "/",
+    },
     {
         name: "Articles",
         link: "/articles",
     },
-    {
-        name: "About",
-        link: "/about",
-    },
-    {
-        name: "Colors",
-        link: "/colors",
-    },
 ]);
+const rightLink = ref({
+    name: "Contact",
+    link: "/contact",
+});
 </script>
