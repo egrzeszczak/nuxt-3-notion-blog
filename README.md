@@ -28,40 +28,41 @@ NOTION_POST_DATABASE=your_notion_posts_database
 
 ### Notion compontents
 
-|Block type|Status|
-|:-:|:-:|
-|Heading 1|✅|
-|Heading 2|✅|
-|Heading 3|✅|
-|Toggle heading 1|🔨|
-|Toggle heading 2|🔨|
-|Toggle heading 3|🔨|
-|Paragraph|✅|
-|Rich text|✅|
-|To-do list|✅|
-|Bullet list|✅|
-|Numbered list|🔨|
-|Table|✅|
-|Toggle|✅|
-|Quote|✅|
-|Divider|✅|
-|Page link|✅|
-|Callout|✅|
-|Table of contents|✅|
-|Subpage|🔨|
-|User mention|🔨|
-|Page mention|🔨|
-|Date mention|🔨|
-|Inline Equation|🔨 (inline displays as a block)|
-|Block equation|🔨|
-|Web bookmark|🔨|
-|Image|✅|
-|Emoji|✅|
-|Video|🔨|
-|Audio|🔨|
-|Code|✅ (without syntax highlighting)|
-|File|🔨|
-|Embed|🔨|
-|Synced block|🔨|
-|Child database|🔨|
-|Button|❌ Not implementing|
+|Block type|Status|Comment|
+|:-:|:-:|:-|
+|Heading 1|✅||
+|Heading 2|✅||
+|Heading 3|✅||
+|Toggle heading 1|✅||
+|Toggle heading 2|✅||
+|Toggle heading 3|✅||
+|Paragraph|✅||
+|Rich text|✅||
+|To-do list|✅||
+|Bullet list|✅||
+|Table|✅||
+|Toggle|✅||
+|Quote|✅||
+|Divider|✅||
+|Page link|✅||
+|Callout|✅||
+|Table of contents|✅||
+|Block equation|✅||
+|Image|✅||
+|Emoji|✅||
+|User mention|✅|Works, just highlights the user|
+|Code|✅🔨|Works without syntax highlighting - will implement something like `highlight.js` later|
+|Numbered list|🔨||
+|Subpage|🔨|It has to have the same properties as the parent article, will fix it later|
+|Page mention|🔨|Works, but for articles - not for subpages|
+|Date mention|🔨|Formatting still to do|
+|Inline Equation|🔨|For now inline displays as a block - will fix it later|
+|Web bookmark|🔨|To do|
+|Video|🔨|To do|
+|Audio|🔨|To do|
+|File|🔨|To do|
+|Embed|🔨|To do|
+|Synced block|🔨|To do|
+|Child database|❌|Not implementing|
+|Breadcrumb|❌|Not implementing|
+|Button|❌|Not implementing|
