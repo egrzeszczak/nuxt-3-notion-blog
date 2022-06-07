@@ -1,4 +1,3 @@
+import { ref } from 'vue'
 
-import { ref } from "vue";
-
-export const postsToRemain = ref([]);
+export const postsToRemain = ref([])

@@ -1,15 +1,15 @@
-import { Client } from "@notionhq/client";
+import { Client } from '@notionhq/client'
 
 export default defineEventHandler((event) => {
     const query = useQuery(event)
-    const notion = new Client({ auth: process.env.NOTION_API_TOKEN });
+    const notion = new Client({ auth: process.env.NOTION_API_TOKEN })
 
     const response = notion.databases.query({
         database_id: process.env.NOTION_POST_DATABASE,
         filter: {
             and: [
                 {
-                    property: "Visible",
+                    property: 'Visible',
                     checkbox: {
                         equals: true,
                     },
@@ -18,13 +18,14 @@ export default defineEventHandler((event) => {
         },
         sorts: [
             {
-                property: "Date",
-                direction: "descending",
+                property: 'Date',
+                direction: 'descending',
             },
         ],
         page_size: 3,
-        start_cursor: query.cursor != 'undefined' ? query.cursor.toString() : undefined
-    });
+        start_cursor:
+            query.cursor != 'undefined' ? query.cursor.toString() : undefined,
+    })
 
-    return response;
-});
+    return response
+})

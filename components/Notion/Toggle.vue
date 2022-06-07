@@ -22,7 +22,7 @@
         >
         </NotionHeading3>
         <div v-else class="collapse-title">
-            <NotionRichText :richText="block[block.type].rich_text  "/>
+            <NotionRichText :richText="block[block.type].rich_text" />
         </div>
         <div class="collapse-content">
             <NotionRender :content="content.results" />
@@ -31,8 +31,8 @@
 </template>
 
 <script setup>
-const props = defineProps(["block"]);
+const props = defineProps(['block'])
 const { data: content } = await useFetch(
     `/api/notion/retrieve-block-children/${props.block.id}`
-);
+)
 </script>

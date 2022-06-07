@@ -51,9 +51,15 @@
 
 <script setup>
 useHead({
-    script: [{ hid: "mathjax", src: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_HTML", defer: true }],
-});
-const props = defineProps(["header", "content"]);
+    script: [
+        {
+            hid: 'mathjax',
+            src: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_HTML',
+            defer: true,
+        },
+    ],
+})
+const props = defineProps(['header', 'content'])
 const publishedAtReadable = computed(() => {
     // Obliczanie daty do przyjaznego formatu
     if (props.header.properties.Date[props.header.properties.Date.type]) {
@@ -61,8 +67,8 @@ const publishedAtReadable = computed(() => {
             props.header.properties.Date[
                 props.header.properties.Date.type
             ].start
-        );
-        return date.toLocaleString();
-    } else return "?";
-});
+        )
+        return date.toLocaleString()
+    } else return '?'
+})
 </script>

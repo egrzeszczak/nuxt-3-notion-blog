@@ -27,5 +27,5 @@
 </template>
 <script setup>
 // This is work in progress
-const props = defineProps(["content"]);
+const props = defineProps(['content'])
 </script>

@@ -52,22 +52,70 @@
                 data-placeholder
                 class="w-full dark:bg-[#1b2126] bg-base-200 h-10 rounded-box overflow-hidden relative"
             ></div>
-            <br/>
-            <p class="flex gap-2 flex-wrap">
+            <br />
+            <div class="flex gap-2 flex-wrap">
                 <div
-                data-placeholder
-                v-for="categoryPlaceholder in [
-                    'w-12', 'w-32', 'w-48', 'w-4', 'w-24', 'w-48', 'w-48', 'w-12', 'w-8',
-                    'w-48', 'w-48', 'w-12', 'w-8', 'w-12', 'w-32', 'w-48', 'w-16', 'w-24',
-                    'w-48', 'w-16', 'w-24', 'w-12', 'w-32', 'w-4', 'w-48', 'w-12', 'w-8',
-                    'w-12', 'w-32', 'w-48', 'w-4', 'w-24', 'w-48', 'w-48', 'w-12', 'w-8',
-                    'w-48', 'w-48', 'w-12', 'w-8', 'w-12', 'w-32', 'w-48', 'w-16', 'w-24',
-                    'w-48', 'w-16', 'w-24', 'w-12', 'w-32', 'w-4', 'w-48', 'w-12', 'w-8',
+                    data-placeholder
+                    v-for="categoryPlaceholder in [
+                        'w-12',
+                        'w-32',
+                        'w-48',
+                        'w-4',
+                        'w-24',
+                        'w-48',
+                        'w-48',
+                        'w-12',
+                        'w-8',
+                        'w-48',
+                        'w-48',
+                        'w-12',
+                        'w-8',
+                        'w-12',
+                        'w-32',
+                        'w-48',
+                        'w-16',
+                        'w-24',
+                        'w-48',
+                        'w-16',
+                        'w-24',
+                        'w-12',
+                        'w-32',
+                        'w-4',
+                        'w-48',
+                        'w-12',
+                        'w-8',
+                        'w-12',
+                        'w-32',
+                        'w-48',
+                        'w-4',
+                        'w-24',
+                        'w-48',
+                        'w-48',
+                        'w-12',
+                        'w-8',
+                        'w-48',
+                        'w-48',
+                        'w-12',
+                        'w-8',
+                        'w-12',
+                        'w-32',
+                        'w-48',
+                        'w-16',
+                        'w-24',
+                        'w-48',
+                        'w-16',
+                        'w-24',
+                        'w-12',
+                        'w-32',
+                        'w-4',
+                        'w-48',
+                        'w-12',
+                        'w-8',
                     ]"
-                :class="categoryPlaceholder"
-                class="h-3 dark:bg-[#1b2126] bg-base-200 rounded-box overflow-hidden relative"
-            ></div>
-            </p>
+                    :class="categoryPlaceholder"
+                    class="h-3 dark:bg-[#1b2126] bg-base-200 rounded-box overflow-hidden relative"
+                ></div>
+            </div>
         </article>
         <!-- Treść -->
     </section>

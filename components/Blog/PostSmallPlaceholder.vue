@@ -159,7 +159,7 @@
 
 <style>
 [data-placeholder]::after {
-    content: " ";
+    content: ' ';
     box-shadow: 0 0 50px 9px rgb(184, 176, 176);
     position: absolute;
     top: 0;

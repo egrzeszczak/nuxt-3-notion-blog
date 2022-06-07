@@ -60,5 +60,5 @@
 </template>
 
 <script setup>
-const props = defineProps(["richText"]);
+const props = defineProps(['richText'])
 </script>

@@ -50,64 +50,64 @@
 
 <script setup>
 // Articles save to storage so during routing you dont lose articles from last API calls
-import { postsToRemain } from "~/store/articles.js";
+import { postsToRemain } from '~/store/articles.js'
 
 // API Cursor for getting next articles
-const cursor = ref(undefined);
+const cursor = ref(undefined)
 
 // Filter by category
-const selectedCategories = ref(new Set());
+const selectedCategories = ref(new Set())
 
 // Async fetching
 const {
     pending,
     data: postsFromNotion,
     refresh,
-} = useLazyAsyncData("postsFromNotion", () =>
+} = useLazyAsyncData('postsFromNotion', () =>
     $fetch(`/api/notion/query-database?cursor=${cursor.value}`)
-);
-watch(postsFromNotion, (postsFromNotionW) => {});
+)
+watch(postsFromNotion, (postsFromNotionW) => {})
 
 // Load more articles (button push)
 const loadMore = () => {
     postsToRemain.value = [
         ...postsToRemain.value,
         ...postsFromNotion.value.results,
-    ];
-    cursor.value = postsFromNotion.value.next_cursor;
-    refresh();
-};
+    ]
+    cursor.value = postsFromNotion.value.next_cursor
+    refresh()
+}
 
 // Filtered posts triggered by category select
 const filteredPosts = computed(() => {
     // Get all posts currently loaded
-    let posts = [...postsToRemain.value, ...postsFromNotion.value.results];
+    let posts = [...postsToRemain.value, ...postsFromNotion.value.results]
 
     // Difference method
     Array.prototype.diff = function (arr2) {
-        return this.filter((x) => !arr2.includes(x));
-    };
+        return this.filter((x) => !arr2.includes(x))
+    }
 
     // Unload selected ids of categories from SET to an ARRAY
-    const selectedCategoriesArray = [...selectedCategories.value.values()];
+    const selectedCategoriesArray = [...selectedCategories.value.values()]
 
     // Filtering magic
     posts = posts.filter((post) => {
         // Get only the ids so we can compare them later
         let postCategories = post.properties.Category[
             post.properties.Category.type
-        ].map(({ id }) => id);
+        ].map(({ id }) => id)
         // Get the intersection from A and B
         let intersection = selectedCategoriesArray.filter((x) =>
             postCategories.includes(x)
-        );
+        )
         // Compare to the original selected categories
         return selectedCategoriesArray.diff(intersection).length == 0
             ? true
-            : false;
-    });
+            : false
+    })
 
     // Return posts
-    return posts;
-});
+    return posts
+})
 </script>

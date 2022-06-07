@@ -101,16 +101,16 @@
 <script setup>
 const middleLinks = ref([
     {
-        name: "Home",
-        link: "/",
+        name: 'Home',
+        link: '/',
     },
     {
-        name: "Articles",
-        link: "/articles",
+        name: 'Articles',
+        link: '/articles',
     },
-]);
+])
 const rightLink = ref({
-    name: "Contact",
-    link: "/contact",
-});
+    name: 'Contact',
+    link: '/contact',
+})
 </script>

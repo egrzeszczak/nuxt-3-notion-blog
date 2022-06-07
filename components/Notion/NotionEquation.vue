@@ -3,6 +3,6 @@
 </template>
 
 <script setup>
-import VueMathjax from 'vue-mathjax-next';
-const props = defineProps(["expression"]);
+import VueMathjax from 'vue-mathjax-next'
+const props = defineProps(['expression'])
 </script>

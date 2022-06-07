@@ -81,14 +81,14 @@
 </template>
 
 <script setup>
-const props = defineProps(["post"]);
+const props = defineProps(['post'])
 const publishedAtReadable = computed(() => {
     // Obliczanie daty do przyjaznego formatu
     if (props.post.properties.Date[props.post.properties.Date.type]) {
         let date = new Date(
             props.post.properties.Date[props.post.properties.Date.type].start
-        );
-        return date.toLocaleString();
-    } else return "?";
-});
+        )
+        return date.toLocaleString()
+    } else return '?'
+})
 </script>

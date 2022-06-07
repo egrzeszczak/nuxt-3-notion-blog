@@ -13,10 +13,12 @@
 
     <!-- Strona -->
     <span v-if="mention[mention.type].type == 'page'">
-        <NuxtLink :to="mention.mention.page.id" >{{mention.plain_text}} &neArr;</NuxtLink>
+        <NuxtLink :to="mention.mention.page.id"
+            >{{ mention.plain_text }} &neArr;</NuxtLink
+        >
     </span>
 </template>
 
 <script setup>
-const props = defineProps(["mention"]);
+const props = defineProps(['mention'])
 </script>
