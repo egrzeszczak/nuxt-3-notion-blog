@@ -51,6 +51,7 @@ NOTION_POST_DATABASE=your_notion_posts_database
 |Image|✅||
 |Emoji|✅||
 |Bookmark|✅||
+|Synced block|✅||
 |User mention|✅|Works, just highlights the user|
 |Code|✅🔨|Works without syntax highlighting - will implement something like `highlight.js` later|
 |Numbered list|🔨||
@@ -62,7 +63,6 @@ NOTION_POST_DATABASE=your_notion_posts_database
 |Audio|🔨|To do|
 |File|🔨|To do|
 |Embed|🔨|To do|
-|Synced block|🔨|To do|
 |Child database|❌|Not implementing|
 |Breadcrumb|❌|Not implementing|
 |Button|❌|Not implementing|

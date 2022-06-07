@@ -36,6 +36,7 @@
         <NotionToDo v-else-if="block.type == 'to_do'" :block="block" />
         <NotionTable v-else-if="block.type == 'table'" :block="block" />
         <NotionToggle v-else-if="block.type == 'toggle'" :block="block" />
+        <NotionSyncedBlock v-else-if="block.type == 'synced_block'" :block="block" />
         <NotionEquation
             v-else-if="block.type == 'equation'"
             :expression="block.equation.expression"
