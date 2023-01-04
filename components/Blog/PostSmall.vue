@@ -88,7 +88,7 @@ const publishedAtReadable = computed(() => {
         let date = new Date(
             props.post.properties.Date[props.post.properties.Date.type].start
         )
-        return date.toLocaleString()
+        return date.toLocaleString('en-US')
     } else return '?'
 })
 </script>
