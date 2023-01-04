@@ -27,7 +27,7 @@ NOTION_POST_DATABASE=your_notion_posts_database
 
 | Title       | Description  | Category             | Author       | Date         | Visible          |
 | ----------- | ------------ | -------------------- | ------------ | ------------ | ---------------- |
-| type: `Key` | type: `Text` | type: `Multi-select` | type: `User` | type: `Date` | type: `Checkbox` |
+| type: `Key` | type: `Text` | type: `Multi-select` | type: `Person` | type: `Date` | type: `Checkbox` |
 
 ### Notion compontents
 
