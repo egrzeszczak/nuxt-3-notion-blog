@@ -48,7 +48,7 @@ const selectCategory = (id) => {
     console.log(props.selectedCategories)
 }
 watch(categories, (categoriesW) => {
-    // Because count starts out null, you won't have access
+    // Because categories starts out null, you won't have access
     // to its contents immediately, but you can watch it.
 })
 </script>

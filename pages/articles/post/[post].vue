@@ -67,11 +67,11 @@ const {
 )
 
 watch(header, (headerW) => {
-    // Because count starts out null, you won't have access
+    // Because head starts out null, you won't have access
     // to its contents immediately, but you can watch it.
 })
 watch(content, (contentW) => {
-    // Because count starts out null, you won't have access
+    // Because content starts out null, you won't have access
     // to its contents immediately, but you can watch it.
 })
 const goBack = () => {
